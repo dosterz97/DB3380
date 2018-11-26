@@ -33,6 +33,12 @@
     background-color: darkgray;
     color: black;
     border-radius: 15px;
+    border: 2px solid maroon;
+    transition: .3s;
+}
+
+.buttons:hover {
+    background-color: maroon;
 }
 
 .grad {
