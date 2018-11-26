@@ -28,7 +28,7 @@
 	<body>
         <h1 class="header">
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
-            Beta Sigma Psi TEST
+            Beta Sigma Psi I like boys
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
         <div class="wrapper">
