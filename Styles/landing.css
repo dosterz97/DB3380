@@ -5,6 +5,10 @@
     font-size: 50px;
 }
 
+.space {
+    padding: 15px;
+}
+
 .wrapper {
     text-align: center;
     padding: 5px;
@@ -23,9 +27,21 @@
     width: 80px;
 }
 
+.Sbuttons {
+    width: 15%;
+    border: 2px solid maroon;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: darkgray;
+    color: black;
+    border-radius: 15px;
+    transition: .3s;
+}
+
 .buttons {
     width: 30%;
-    border: none;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -35,6 +51,10 @@
     border-radius: 15px;
     border: 2px solid maroon;
     transition: .3s;
+}
+
+.Sbuttons:hover {
+    background-color: maroon;
 }
 
 .buttons:hover {

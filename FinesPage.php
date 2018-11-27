@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Beta Sigma Psi - Submit Fine</title>
+        <title>Beta Sigma Psi - Individual Fines</title>
         <link rel="stylesheet" type="text/css" href="Styles/landing.css">
         <link rel="stylesheet" type="text/css" href="Styles/member.css">
         <link rel="stylesheet" type="text/css" href="Styles/tables.css">
@@ -11,17 +11,15 @@
     <body>
         <h1 class="header">
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
-            Beta Sigma Psi - Submit Fine
+            Beta Sigma Psi - Fines
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
-        </h1>        
-            <ul>
-                <li><a href="default.asp">Create Fine <i class="material-icons md-24">add</i></a></li>
-            </ul>
-        <div>
+        </h1>
+        <button type="button" class="Sbuttons" onclick="window.location.href='FinesPage.php'">Create Fine <i class="material-icons md-24">add</i></button>
+        <div class="space">
             <table>
                 <thead>
                 <tr>
-                    <td>Id</td>
+                    <td>Fine ID</td>
                     <td>Date</td>
                     <td>Description</td>
                     <td>Amount</td>

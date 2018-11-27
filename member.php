@@ -12,9 +12,14 @@
             Beta Sigma Psi - Member
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
+        <div>
         <ul>
             <li><a href="FinesPage.php">Fines</a></li>
-            <li><a href="news.asp">Work Orders</a></li>
+            <li><a href="WorkOrders.php">Work Orders</a></li>
         </ul>
+        </div>
+        <div style="text-align: center">
+            Text
+        </div>
     </body>
 </html>
