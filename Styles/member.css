@@ -7,6 +7,7 @@ ul {
     border-radius: 9px;
     height: 33%;
     border: 2px solid maroon;
+    text-align: left;
 }
 
 li a {
