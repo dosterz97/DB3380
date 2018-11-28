@@ -13,7 +13,7 @@
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
         <div>
-            <form class="forms">
+            <form class="forms" action="/actionPage.php" method="post">
                 Amount: <input type="text" name="amount"><br><br>
                 <textarea placeholder="Description" rows="10" cols="30"></textarea><br><br>
                 <input class="Sbuttons" type="submit" value="Submit">
