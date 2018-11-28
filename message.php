@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Beta Sigma Psi - Messaging</title>
         <link rel="stylesheet" type="text/css" href="Styles/landing.css">
+        <link rel="stylesheet" type="text/css" href="Styles/tables.css">
     </head>
     <body>
         <h1 class="header">
@@ -14,7 +15,19 @@
         <div class="wrapper">
             <button type="button" class="buttons" onclick="">Email All Members</button>
             <button type="button" class="buttons" onclick="">Email All Alumni</button>
-            <button type="button" class="buttons" onclick="">Email Other</button>
-        </div>
+        </div><br>
+        <table>
+            <thead>
+                <tr>
+                    <td>Member</td>
+                    <td>Phone</td>
+                    <td>Email</td>
+                    <td>Parent(s)</td>
+                    <td>Parent Email</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </body>
 </html>
