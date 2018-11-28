@@ -17,6 +17,12 @@
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
         <div class="wrapper">
+            <form action="/search.php">
+                <input type="text" placeholder="Search..." name="searchQuery">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="wrapper">
             <button type="button" class="buttons" onclick="window.location.href='message.php'">Message</button>
         </div>
         <div class="wrapper">

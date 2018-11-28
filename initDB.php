@@ -1,11 +1,16 @@
 <?php
 $debug = true;
 function makeQuery($myConnection, $myQuery) {
-    if($myConnection->query($myQuery) === TRUE) {
+    $result = $myConnection->query($myQuery);
+    if($result === TRUE) {
         logVariable("Successful query");
     }
-    else if($myConnection->error) {
+    else if($result->error) {
         logVariableWithContext("Error in query: ", $myConnection->error);
+    }
+    else {
+        logVariable("query didn't return TRUE or an error");
+        logVariable($result);
     }
 }
 
@@ -41,7 +46,9 @@ makeQuery($conn,$createDB);
 if ($conn->query($createDB) !== TRUE) {
     logVariableWithContext("Error in creating database: ", $conn->error);
 }
-logVariable("Database Up and Running");
+else {
+    logVariable("Database Up and Running");
+}
 $conn->close();
 
 $conn = new mysqli($servername, $username, $password, $dbName);
