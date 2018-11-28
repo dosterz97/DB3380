@@ -1,0 +1,29 @@
+{
+    "fines" : [
+        {
+            "id": "makingamess",
+            "guiltyMember": "mhoffm",
+            "finingMember": "hoagen",
+            "status": 0,
+            "date": "2018-11-04",
+            "amount": 200,
+            "description": "Mitch made a mess in erics room and needs to pay for what he broke."
+        },{
+            "id": "champmisschapt",
+            "guiltyMember": "champy",
+            "finingMember": "sconce3",
+            "status": 0,
+            "date": "2018-11-28",
+            "amount": 5,
+            "description": "Missing chapter without an excuse"
+        },{
+            "id": "missinghatfield",
+            "guiltyMember": "uncldn",
+            "finingMember": "schoik",
+            "status": 0,
+            "date": "2018-10-07",
+            "amount": 30,
+            "description": "Missing an important chapter with out national advisor"
+        }
+    ]
+}
