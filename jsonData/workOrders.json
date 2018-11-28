@@ -1,0 +1,29 @@
+{
+    "workOrders" : [
+        {
+            "id": "fixthesink",
+            "member": "jba8t3",
+            "location": "Second Floor Bathroom",
+            "amount": 50,
+            "status": 0
+        },{
+            "id": "replacedoor",
+            "member": "huston",
+            "location": "Crows Nest",
+            "amount": 250,
+            "status": 0
+        },{
+            "id": "newshowerheads",
+            "member": "jba8t3",
+            "location": "Third Floor Bathroom",
+            "amount": 100,
+            "status": 1
+        },{
+            "id": "ethernetfix",
+            "member": "scrublu",
+            "location": "Room 309",
+            "amount": "50",
+            "status": 0
+        }
+    ]
+}
