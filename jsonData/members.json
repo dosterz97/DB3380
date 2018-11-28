@@ -1,0 +1,28 @@
+{
+    "members" : [
+    {
+        "pawprint": "jba8t3",
+        "firstName": "Jack",
+        "lastName": "Allen",
+        "position": "2nd Vice President",
+        "room": 308,
+        "seniority": 27,
+        "status": 0,
+        "semesterJoined": "FS17",
+        "yearInSchool": 1,
+        "fines": null
+    }, 
+    {
+        "pawprint": "kbmxr6",
+        "firstName": "Kyle",
+        "lastName": "Meyer",
+        "position": "Scholarship Chairman",
+        "room": 300,
+        "seniority": 60,
+        "status": 0,
+        "semesterJoined": "FS16",
+        "yearInSchool": 2,
+        "fines": null
+    }
+]
+}
