@@ -7,7 +7,7 @@
 	</head>
 	<body>
     <?php
-        //require 'initDB.php';
+        require 'initDB.php';
         //add this to delete the db
         // require 'deinitDB.php';
     ?>

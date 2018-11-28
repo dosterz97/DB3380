@@ -52,15 +52,20 @@ if ($conn->connect_error) {
 //Create tables
 $member = "CREATE TABLE IF NOT EXISTS Member(
     pawprint varchar(6) PRIMARY KEY,
-    fName varchar(30) NOT NULL,
-    lName varchar(30) NOT NULL,
-    semesterJoined varchar(30) NOT NULL,
+    firstName varchar(30) NOT NULL,
+    lastName varchar(30) NOT NULL,
+    position varchar(50),
+    room int,
+    seniority int,
     mStatus ENUM ('active', 'inactive', 'associate', 'alumni') NOT NULL,
-    schoolYear ENUM ('freshman', 'sophmore', 'junior', 'senior'),
-    roomNumber int
+    semesterJoined varchar(30) NOT NULL,
+    yearInSchool ENUM ('freshman', 'sophmore', 'junior', 'senior'),
+    fines varchar(30)
     -- FOREIGN KEY (roomNumber) REFERENCES Room(roomID)
   )";
 makeQuery($conn,$member);
+
+                
 $fine = "CREATE TABLE IF NOT EXISTS Fine(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     guiltyMemberId varchar(6) NOT NULL,
