@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add Member</title>
+        <title>Beta Sigma Psi - Add Member</title>
     </head>
     <body>
         <form action="addMember.php" method="post">

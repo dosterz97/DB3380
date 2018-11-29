@@ -17,7 +17,7 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <button type="button" class="buttons" onclick="">Add Member</button>
+                    <button type="button" class="buttons" onclick="window.location.href='addMember_form.php'">Add Member</button>
                     <button type="button" class="buttons" onclick="">Edit Member</button>
                 </div>
             </div>
