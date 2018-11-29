@@ -17,7 +17,7 @@
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
         <div class="wrapper">
-            <button type="button" class="buttons" onclick="window.location.href='message.php'">Message</button>
+            <button type="button" class="buttons" onclick="window.location.href='roster.php'">Roster</button>
         </div>
         <div class="wrapper">
             <button type="button" class="buttons" onclick="window.location.href='rooms.php'">Rooms</button>

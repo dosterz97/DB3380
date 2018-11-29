@@ -11,8 +11,10 @@
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
             Beta Sigma Psi - Rooms
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
-        </h1> 
+        </h1>
+        <button type="button" class="Sbuttons" onclick="">Update Rooms</button><br>
         <div>
+            <br>
             <table>
                 <thead>
                 <tr>
