@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>Beta Sigma Psi - Individual Fines</title>
         <link rel="stylesheet" type="text/css" href="Styles/landing.css">
-        <link rel="stylesheet" type="text/css" href="Styles/member.css">
         <link rel="stylesheet" type="text/css" href="Styles/tables.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>

@@ -14,12 +14,9 @@
     padding: 5px;
 }
 
-.wrapper ul {
-    text-align: center;
-}
-
-.wrapper ul li {
-    display: inline;
+#memberPage {
+    text-align: left;
+    padding: 20px;
 }
 
 .image {
@@ -29,6 +26,7 @@
 
 .Sbuttons {
     width: 15%;
+    outline: none;
     border: 2px solid maroon;
     font-size: 19px;
     text-align: center;
@@ -38,10 +36,12 @@
     color: black;
     border-radius: 15px;
     transition: .3s;
+    padding: 5px;
 }
 
 .buttons {
     width: 30%;
+    outline: none;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -53,6 +53,18 @@
     transition: .3s;
 }
 
+#searchButton {
+    width: 30%;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid maroon;
+}
+
 .Sbuttons:hover {
     background-color: maroon;
 }
@@ -60,24 +72,6 @@
 .buttons:hover {
     background-color: maroon;
 }
-
-.grad {
-    background-image: linear-gradient(darkred, red);
-    height: 100%;
-}
-
-#myInput {
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-#myInput:focus {outline: 3px solid black;}
 
 .dropdown {
     display: inline-block;

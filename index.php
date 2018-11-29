@@ -7,7 +7,7 @@
 	</head>
 	<body>
     <?php
-        //require 'initDB.php';
+        require 'initDB.php';
         //add this to delete the db
         // require 'deinitDB.php';
     ?>
@@ -16,12 +16,6 @@
             Beta Sigma Psi
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <div class="wrapper">
-            <form action="/search.php">
-                <input type="text" placeholder="Search..." name="searchQuery">
-                <button type="submit">Submit</button>
-            </form>
-        </div>
         <div class="wrapper">
             <button type="button" class="buttons" onclick="window.location.href='message.php'">Message</button>
         </div>
@@ -41,6 +35,12 @@
                     <a href="#support">Support</a>
                     <a href="#tools">Tools</a>
             </div>-->
+        </div>
+        <div class="wrapper">
+            <form action="/search.php">
+                <input id="searchButton" type="text" placeholder="Search..." name="searchQuery">
+                <button type="submit">Submit</button>
+            </form>
         </div>
 	</body>
     <script>

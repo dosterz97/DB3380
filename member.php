@@ -12,11 +12,9 @@
             Beta Sigma Psi - Member
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <div>
-        <ul>
-            <li><a href="FinesPage.php">Fines</a></li>
-            <li><a href="WorkOrders.php">Work Orders</a></li>
-        </ul>
+        <div id="memberPage">
+            <button type="button" class="Sbuttons" onclick="window.location.href='FinesPage.php'">Fines</button><br>
+            <button type="button" class="Sbuttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
         </div>
         <div style="text-align: center">
             Text
