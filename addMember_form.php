@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Beta Sigma Psi - Add Member</title>
+        <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
+        <title>Add Member</title>
     </head>
     <body>
+         <h1 class="header">
+            <img class="image" src="images/BetaSigCrest.png" alt="Crest">
+            Beta Sigma Psi - Add Member
+            <img class="image" src="images/BetaSigCrest.png" alt="Crest">
+        </h1>
         <form action="addMember.php" method="post">
             Pawprint:
             <input type="text" name="pawprint" placeholder="Mizzou Pawprint"><br>
@@ -32,7 +38,8 @@
             <input type="radio" name="grade" value="junior"> Junior<br>
             <input type="radio" name="grade" value="senior"> Senior<br>
             <input type="radio" name="grade" value="graduate"> Graduate<br>
-            <input type="submit">
+            <input id="submitBtn" type="submit">
+            <button id="deleteBtn" type="button"><b>Delete</b></button>
         </form>
     </body>
 </html>
