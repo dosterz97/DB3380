@@ -27,11 +27,12 @@
 .Sbuttons {
     width: 15%;
     outline: none;
+    margin: 2px;
     border: 2px solid maroon;
     font-size: 19px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    float: left;
     background-color: darkgray;
     color: black;
     border-radius: 15px;
