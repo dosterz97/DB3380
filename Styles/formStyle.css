@@ -6,6 +6,7 @@ form {
     margin: auto;
     margin-bottom: 10px;
     padding: 10px;
+    border-radius: 10px;
 }
 .header {
     color: black;
@@ -20,7 +21,7 @@ form {
     font-size: 20px;
 }
 #deleteBtn {
-    background-color: red;
+    background-color: maroon;
     color: black;
     font-size: 15px;
 }

@@ -12,20 +12,20 @@
             Beta Sigma Psi - Member
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <h2 id="nameBox" style="text-align: center">
+        <h2 id="nameBox">
             Jack Allen
-        </h2>        
+        </h2>
         <div id="memberPage">
-            <button type="button" class="Sbuttons" onclick="window.location.href='FinesPage.php'">Fines</button>
+            <button type="button" class="Sbuttons" onclick="window.location.href='FinesPage.php'">Fines</button><br><br><br>
             <button type="button" class="Sbuttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
         </div>
-        <div>
+        <div class="header">
             Semester Joined: <br>
             Pawprint: <br>
             Current Room: <br>
             Status: <br>
             Senority Points: <br>
-            Position(s) Held: <br>
+            Position: <br>
         </div>
     </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
-        <title>Add Member</title>
+        <title>Beta Sigma Psi - Add Member</title>
     </head>
     <body>
          <h1 class="header">
