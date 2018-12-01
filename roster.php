@@ -31,7 +31,7 @@
             <thead>
                 <tr>
                     <td>Member</td>
-                    <td>Phone</td>
+                    <td>Year</td>
                     <td>Email</td>
                     <td>Parent(s)</td>
                     <td>Parent Email</td>
@@ -40,13 +40,20 @@
             <tbody>
                 <?php
                     $sql = "SELECT * FROM member";
+                    //$sqli = "SELECT * FROM memberParent";
                     $result = mysqli_query($conn, $sql);
+                    //$resulti = mysqli_query($conn, $sqli);
 
                     while($member = mysqli_fetch_assoc($result)){
                         echo "<tr>";
-                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$member['pawprint'].'</td>';
+                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint'].'</td>';
                         echo '</tr>';
                     }
+                    /*while($memberParent = mysqli_fetch_assoc($resulti)){
+                        echo"<tr>";
+                        echo '<td>'.$memberParent['parentFirstName'].'</td>';
+                        echo '<tr>';
+                    }*/
                 ?>
             </tbody>
         </table>

@@ -25,7 +25,7 @@ function logVariableWithContext($context, $var) {
     ?><script>console.log("<?php echo $context . $var?>");</script><?php
     }
 }
-$tables = array("Member", "Fine", "WorkOrder", "PledgeClass", "Room");
+$tables = array("Member", "Fine", "WorkOrder", "Room", "MemberParent");
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -73,7 +73,7 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
 makeQuery($conn,$member);
 
 $memberParent = "CREATE TABLE IF NOT EXISTS MemberParent(
-    pawprint varchar(6) PRIMARY KEY
+    pawprint varchar(6) PRIMARY KEY,
     parentFirstName varchar(30) NOT NULL,
     parentLastName varchar(30) NOT NULL,
     parentEmail varchar(60)
@@ -90,6 +90,7 @@ $fine = "CREATE TABLE IF NOT EXISTS Fine(
     fineDescription Text
   )";
 makeQuery($conn, $fine);
+
 $workOrder = "CREATE TABLE IF NOT EXISTS WorkOrder(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     filingMemberId varchar(6) NOT NULL,
@@ -98,6 +99,7 @@ $workOrder = "CREATE TABLE IF NOT EXISTS WorkOrder(
     workOrderStatus ENUM ('pendingFunding', 'pendingCompletion', 'finished', 'wontFix')
   )";
 makeQuery($conn, $workOrder);
+
 $room = "CREATE TABLE IF NOT EXISTS Room(
     roomNumber int PRIMARY KEY,
     nickName varchar(50)
