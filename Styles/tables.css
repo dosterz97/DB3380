@@ -4,11 +4,25 @@ table {
     width: 100%;
     text-align: center;
     font-size: 16px;
+    border: 1px solid black;
 }
 
 table th, td {
-    border: 1px solid black;
     font-size: 16px;
+}
+tr {
+    border-bottom: 1px solid black;
+}
+thead {
+    color:white;
+    background-color: maroon;
+    height: 40px;
+}
+thead > tr {
+    height: 40px;
+}
+tr:nth-child(2n) {
+    background-color: #b9b9b9;
 }
 
 .forms {

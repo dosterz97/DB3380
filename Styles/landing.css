@@ -24,26 +24,10 @@
     width: 80px;
 }
 
-.Sbuttons {
-    width: 15%;
-    outline: none;
-    margin: 2px;
-    border: 2px solid maroon;
-    font-size: 19px;
-    text-align: center;
-    text-decoration: none;
-    float: left;
-    background-color: darkgray;
-    color: black;
-    border-radius: 15px;
-    transition: .3s;
-    padding: 5px;
-}
-
 #myBtn {
-    width: 30%;
+    width: 250px;
     outline: none;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -52,12 +36,13 @@
     border-radius: 15px;
     border: 2px solid maroon;
     transition: .3s;
+    font-size:1em;
 }
 
 .buttons {
-    width: 30%;
+    width: 250px;
     outline: none;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -66,30 +51,35 @@
     border-radius: 15px;
     border: 2px solid maroon;
     transition: .3s;
+    font-size:1em;
 }
 
 #searchButton {
-    width: 30%;
+    width: 246px;
     outline: none;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     background-color: white;
     border-radius: 15px;
     border: 2px solid maroon;
+    font-size:1em;
 }
 
 #myBtn:hover {
     background-color: maroon;
+    color:white;
 }
 
 .Sbuttons:hover {
     background-color: maroon;
+    color:white;
 }
 
 .buttons:hover {
     background-color: maroon;
+    color:white;
 }
 
 .modal {
