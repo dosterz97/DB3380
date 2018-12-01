@@ -33,7 +33,7 @@
 
                         while($room = mysqli_fetch_assoc($result)){
                             echo "<tr>";
-                            echo '<td>'.$room['nickName'].'</td>'. '<td>'.$room['roomNumber'].'</td>'. '<td>'.$room['members'].'</td>';
+                            echo '<td>'.$room['nickName'].'</td>'. '<td>'.$room['roomNumber'].'</td>';
                             echo '</tr>';
                         }
                     ?>

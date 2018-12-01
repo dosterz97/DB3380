@@ -39,7 +39,7 @@
         <div class="wrapper">
             <form action="/search.php">
                 <input id="searchButton" type="text" placeholder="Search..." name="searchQuery">
-                <button type="submit">Submit</button>
+                <!--<button type="submit">Submit</button>-->
             </form>
         </div>
 	</body>
