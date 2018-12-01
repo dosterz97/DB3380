@@ -7,6 +7,9 @@
         <link rel="stylesheet" type="text/css" href="Styles/tables.css">
     </head>
     <body>
+        <?php
+            require 'initDB.php';
+        ?>
         <h1 class="header">
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
             Beta Sigma Psi - Roster
@@ -33,6 +36,16 @@
                     <td>Parent(s)</td>
                     <td>Parent Email</td>
                 </tr>
+                <?php
+                    $sql = "SELECT * FROM member";
+                    $result = mysqli_query($conn, $sql);
+
+                    while($member = mysqli_fetch_assoc($result)){
+                        echo "<tr>";
+                        echo '<td>'.$member['pawprint'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$member['fName'].'</td>';
+                        echo '</tr>';
+                    }
+                ?>
             </thead>
             <tbody>
             </tbody>
