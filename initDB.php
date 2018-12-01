@@ -91,16 +91,9 @@ $workOrder = "CREATE TABLE IF NOT EXISTS WorkOrder(
     workOrderStatus ENUM ('pendingFunding', 'pendingCompletion', 'finished', 'wontFix')
   )";
 makeQuery($conn, $workOrder);
-$pledgeClass = "CREATE TABLE IF NOT EXISTS PledgeClass(
-    classId varchar(4) PRIMARY KEY,
-    classSize int NOT NULL, 
-    members varchar(6)
-  )";
-makeQuery($conn,$pledgeClass);
 $room = "CREATE TABLE IF NOT EXISTS Room(
     roomNumber int PRIMARY KEY,
     nickName varchar(50),
-    members varchar(6)
   )";
 makeQuery($conn,$room);
 ?>
