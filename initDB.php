@@ -10,8 +10,8 @@ function makeQuery($myConnection, $myQuery) {
     }
     else {
         logVariable("query didn't return TRUE or an error");
-        logVariable($result);
     }
+    return $result;
 }
 
 function logVariable($var) {
@@ -32,6 +32,7 @@ $password = "root";
 $dbName = "beta_sig_iota";
 
 // Create connection
+
 $conn = new mysqli($servername, $username, $password);
 // Check connection
 if ($conn->connect_error) {
@@ -62,12 +63,11 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
     firstName varchar(30) NOT NULL,
     lastName varchar(30) NOT NULL,
     position varchar(50),
-    room int,
+    roomNumber int,
     seniority int,
     mStatus ENUM ('active', 'inactive', 'associate', 'alumni') NOT NULL,
     semesterJoined varchar(30) NOT NULL,
     yearInSchool ENUM ('freshman', 'sophmore', 'junior', 'senior'),
-    fines varchar(30)
     -- FOREIGN KEY (roomNumber) REFERENCES Room(roomID)
   )";
 makeQuery($conn,$member);

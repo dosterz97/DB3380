@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        .memberBody > div {
+            width:100%;
+            font-size: 1.5em;
+            text-align:center;
+        }
+        .member-buttons-wrapper {
+            max-width: 1000px;
+            display:flex;
+            justify-content:center;
+        }
+        .member-buttons-wrapper .buttons {
+            margin:0px 5px;
+        }
+    </style>
     <head>
         <?php
             require 'initDB.php';
             $searchQuery = htmlspecialchars($_GET["searchQuery"]);
-            $query = "SELECT * FROM `beta_sig_iota`.`member` WHERE pawprint = '" . $searchQuery."';";
-            
-            
-            echo $query;
-            //$result = makeQuery($conn,$query);
-            //echo $result;
+            $query = "SELECT * FROM `Member` WHERE `pawprint` = '$searchQuery' ORDER BY `pawprint` DESC";
+                        
+            $result = makeQuery($conn, $query);
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {                
+                    $pawprint = $row["pawprint"];
+                    $firstName = $row["firstName"];
+                    $lastName = $row["lastName"];
+                    $position = $row["position"];
+                    $roomNumber = $row["roomNumber"];
+                    $seniority = $row["seniority"];
+                    $mStatus = $row["mStatus"];
+                    $semesterJoined = $row["semesterJoined"];
+                    $yearInSchool = $row["yearInSchool"];
+                }
+            } 
         ?>
         <meta charset="utf-8">
         <title>Beta Sigma Psi - Member</title>
@@ -24,20 +50,21 @@
         </h1>
         <h2 id="nameBox">
             <?php
-                echo $searchQuery;
+                echo $firstName . " " . $lastName;
             ?>
         </h2>
-        <div id="memberPage">
-            <button type="button" class="Sbuttons" onclick="window.location.href='FinesPage.php'">Fines</button><br><br><br>
-            <button type="button" class="Sbuttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
+        <div id="memberPage" class="member-buttons-wrapper">
+            <button type="button" class="buttons" onclick="window.location.href='FinesPage.php'">Fines</button>
+            <button type="button" class="buttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
         </div>
-        <div class="header">
-            Semester Joined: <br>
-            Pawprint: <br>
-            Current Room: <br>
-            Status: <br>
-            Senority Points: <br>
-            Position: <br>
+        <div class="memberBody">
+            <div>Semester Joined: <?php echo $semesterJoined; ?></div>
+            <div>Pawprint: <?php echo $pawprint; ?><br></div>
+            <div>Email: <a href="mailto:<?php echo $pawprint; ?>@mail.missouri.edu"><?php echo $pawprint; ?>@mail.missouri.edu</a></div>
+            <div>Current Room: <?php echo $roomNumber; ?><br></div>
+            <div>Year In School: <?php echo $yearInSchool; ?><br></div>
+            <div>Senority Points: <?php echo $seniority; ?><br></div>
+            <div>Position: <?php echo $position; ?><br></div>
         </div>
     </body>
 </html>
