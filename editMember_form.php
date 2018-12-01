@@ -10,37 +10,38 @@ session_start();
     </head>
     <body>
         <?php 
-        //UNCOMMENT WHEN HOOKED UP TO DB
-//            $pawprint = $_POST['pawprint'];
-//            $queryForResult = "SELECT * FROM Member WHERE pawprint = '$pawprint';";
-//        
-//            $servername = "localhost";
-//            $username = "root";
-//            $password = "root";
-//            $dbname = "beta_sig_iota";
-//        
-//            $conn = new mysqli($servername, $username, $password);
-//
-//            if($conn->connect_error) {
-//                logVariableWithContext("Error connecting to database: ", $conn->connect_error);
-//                die("Connection failed: " . $conn->connect_error);
-//            }
-//            
-//            $result = $conn->query($queryForResult);
-//        
-//            if(!$result) {
-//                die();
-//            }
-//            
-//            $row = mysql_fetch_row($result);
-//            $_SESSION["firstName"] = $row['fname'];
-//            $_SESSION["lastName"] = $row['lname'];
-//            $_SESSION["semesterJoined"] = $row['semesterJoined'];
-//            $_SESSION["position"] = $row['position'];
-//            $_SESSION["status"] = $row['mStatus'];
-//            $_SESSION["schoolYear"] = $row['schoolYear'];
-//            $_SESSION["roomNumber"] = $row['roomNumber'];
-//            $_SESSION["seniority"] = $row['seniority'];
+       // UNCOMMENT WHEN HOOKED UP TO DB
+            $pawprint = $_POST['pawprint'];
+            $_SESSION["pawprint"] = $pawprint;
+            $queryForResult = "SELECT * FROM Member WHERE pawprint = '$pawprint';";
+        
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+            $dbname = "beta_sig_iota";
+        
+            $conn = new mysqli($servername, $username, $password);
+
+            if($conn->connect_error) {
+                logVariableWithContext("Error connecting to database: ", $conn->connect_error);
+                die("Connection failed: " . $conn->connect_error);
+            }
+            
+            $result = $conn->query($queryForResult);
+        
+            if(!$result) {
+                die();
+            }
+            
+            $row = mysql_fetch_row($result);
+            $_SESSION["firstName"] = $row['fname'];
+            $_SESSION["lastName"] = $row['lname'];
+            $_SESSION["semesterJoined"] = $row['semesterJoined'];
+            $_SESSION["position"] = $row['position'];
+            $_SESSION["status"] = $row['mStatus'];
+            $_SESSION["schoolYear"] = $row['schoolYear'];
+            $_SESSION["roomNumber"] = $row['roomNumber'];
+            $_SESSION["seniority"] = $row['seniority'];
 
         ?>
          <h1 class="header">
@@ -90,7 +91,13 @@ session_start();
             Parent Two Email:
             <input type="text" name="parent2email"><br>
             <input id="submitBtn" type="submit">
-            <button id="deleteBtn" type="button"><b>Delete</b></button>
+            <button id="deleteBtn" type="button" onclick="deleteMember()"><b>Delete</b></button>
         </form>
+        
+        <script>
+            function deleteMember() {
+                window.location.replace("deleteMember.php");
+            }
+        </script>
     </body>
 </html>
