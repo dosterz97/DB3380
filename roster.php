@@ -36,6 +36,8 @@
                     <td>Parent(s)</td>
                     <td>Parent Email</td>
                 </tr>
+            </thead>
+            <tbody>
                 <?php
                     $sql = "SELECT * FROM member";
                     $result = mysqli_query($conn, $sql);
@@ -46,8 +48,6 @@
                         echo '</tr>';
                     }
                 ?>
-            </thead>
-            <tbody>
             </tbody>
         </table>
                 <script>
