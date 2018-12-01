@@ -44,7 +44,7 @@
 
                     while($member = mysqli_fetch_assoc($result)){
                         echo "<tr>";
-                        echo '<td>'.$member['pawprint'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$member['fName'].'</td>';
+                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$member['pawprint'].'</td>';
                         echo '</tr>';
                     }
                 ?>
