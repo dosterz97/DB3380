@@ -12,6 +12,7 @@ function makeQuery($myConnection, $myQuery) {
         logVariable($result);
     }
 }
+
     //this is where we take the form data and add it to the database
     $pawprint = $_POST['pawprint'];
     $firstName = $_POST['firstName'];
@@ -42,18 +43,19 @@ function makeQuery($myConnection, $myQuery) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $insertQuery = "INSERT INTO Member (pawprint, fname, lname, semesterJoined, position, mStatus, schoolYear, roomNumber) VALUES ('$pawprint', '$firstName', '$lastName', '$semesterJoined', '$position', '$status', '$grade', '$roomNumber');";
-    makeQuery($conn, $insertQuery);
-    //TODO: Make supplementary tables (example: parent)
+    $updateQuery = "UPDATE Member SET pawprint = '$pawprint', fname = '$firstName', lname = '$lastName', semesterJoined = '$semesterJoined', position = '$position', mStatus = '$status', schoolYear = '$grade', roomNumber = $roomNumber WHERE pawprint = '$pawprint';";
+    
+    makeQuery($conn, $updateQuery);
+
     if($parentOneFirstName != NULL) {
-      $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFname, parentLname, parentEmail) VALUES ('$parentOneFirstName', '$parentOneLastName', '$parentOneEmail');";
-        makeQuery($conn, $insertQueryParents);
+        $updateQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFname = '$parentOneFirstName', parentLname = '$parentOneLastName', parentEmail = '$parentOneEmail' WHERE pawprint = $pawprint;)";
+        makeQuery($conn, $updateQueryParents);
     }
 
     if($parentTwoFirstName != NULL) {
-        $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFname, parentLname, parentEmail) VALUES ('$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
-        makeQuery($conn, $insertQueryParents)
+        $insertQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFname = '$parentTwoFirstName', parentLname = '$parentTwoLastName', parentEmail = '$parentTwoEmail' WHERE pawprint = $pawprint;)";
+        makeQuery($conn, $updateQueryParents);
     }
-    echo "<script type='text/javascript'>alert('member successfully added');</script>";
+    echo "<script type='text/javascript'>alert('member successfully updated');</script>";
     header('Location: roster.php');
 ?>
