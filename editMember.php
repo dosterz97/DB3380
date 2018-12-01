@@ -48,12 +48,12 @@ function makeQuery($myConnection, $myQuery) {
     makeQuery($conn, $updateQuery);
 
     if($parentOneFirstName != NULL) {
-        $updateQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFname = '$parentOneFirstName', parentLname = '$parentOneLastName', parentEmail = '$parentOneEmail' WHERE pawprint = $pawprint;)";
+        $updateQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFirstName = '$parentOneFirstName', parentLastName = '$parentOneLastName', parentEmail = '$parentOneEmail' WHERE pawprint = $pawprint)";
         makeQuery($conn, $updateQueryParents);
     }
 
     if($parentTwoFirstName != NULL) {
-        $insertQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFname = '$parentTwoFirstName', parentLname = '$parentTwoLastName', parentEmail = '$parentTwoEmail' WHERE pawprint = $pawprint;)";
+        $insertQueryParents = "UPDATE MemberParent SET pawprint = '$pawprint', parentFirstName = '$parentTwoFirstName', parentLastName = '$parentTwoLastName', parentEmail = '$parentTwoEmail' WHERE pawprint = $pawprint)";
         makeQuery($conn, $updateQueryParents);
     }
     echo "<script type='text/javascript'>alert('member successfully updated');</script>";
