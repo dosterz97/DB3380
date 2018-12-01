@@ -15,10 +15,6 @@
             <input type="number" name="roomNumber"><br>
             Room Nickname: 
             <input type="text" name="roomNickname"><br>
-            Member One Pawprint: 
-            <input type="text" name="memberOnePawprint"><br>
-            Member Two Pawprint:
-            <input type="text" name="memberTwoPawprint"><br>
             <input type="submit">
         </form>
     </body>
