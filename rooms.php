@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <?php
+            require 'initDB.php';
+        ?>
         <meta charset="utf-8">
         <title>Beta Sigma Psi - Rooms</title>
         <link rel="stylesheet" type="text/css" href="Styles/landing.css">
@@ -24,6 +27,16 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $sql = "SELECT * FROM room";
+                        $result = mysqli_query($conn, $sql);
+
+                        while($room = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo '<td>'.$room['nickName'].'</td>'. '<td>'.$room['roomNumber'].'</td>'. '<td>'.$room['members'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
