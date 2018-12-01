@@ -12,7 +12,7 @@
             Beta Sigma Psi - Rooms
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <button type="button" class="Sbuttons" onclick="">Update Rooms</button><br>
+        <button type="button" class="Sbuttons" onclick="window.location.href= 'addRoom_form.php'">Add Room</button><br>
         <div>
             <br>
             <table>
