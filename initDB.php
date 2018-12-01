@@ -62,6 +62,8 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
     fName varchar(30) NOT NULL,
     lName varchar(30) NOT NULL,
     semesterJoined varchar(30) NOT NULL,
+    position varchar(30),
+    seniority int,
     mStatus ENUM ('active', 'inactive', 'associate', 'alumni') NOT NULL,
     schoolYear ENUM ('freshman', 'sophmore', 'junior', 'senior'),
     roomNumber int

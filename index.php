@@ -7,9 +7,9 @@
 	</head>
 	<body>
     <?php
-    //    require 'initDB.php';
-        //add this to delete the db
-        // require 'deinitDB.php';
+      //  require 'initDB.php';
+     //   add this to delete the db
+      //   require 'deinitDB.php';
     ?>
         <h1 class="header">
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
