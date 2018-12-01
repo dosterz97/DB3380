@@ -46,12 +46,12 @@ function makeQuery($myConnection, $myQuery) {
     makeQuery($conn, $insertQuery);
     //TODO: Make supplementary tables (example: parent)
     if($parentOneFirstName != NULL) {
-      $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFname, parentLname, parentEmail) VALUES ('$parentOneFirstName', '$parentOneLastName', '$parentOneEmail');";
+      $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$parentOneFirstName', '$parentOneLastName', '$parentOneEmail');";
         makeQuery($conn, $insertQueryParents);
     }
 
     if($parentTwoFirstName != NULL) {
-        $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFname, parentLname, parentEmail) VALUES ('$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
+        $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
         makeQuery($conn, $insertQueryParents)
     }
     echo "<script type='text/javascript'>alert('member successfully added');</script>";
