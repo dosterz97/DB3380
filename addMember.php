@@ -25,7 +25,7 @@
 
     if($parentTwoFirstName != NULL) {
         $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
-        makeQuery($conn, $insertQueryParents)
+        makeQuery($conn, $insertQueryParents);
     }
     echo "<script type='text/javascript'>alert('member successfully added');</script>";
 
