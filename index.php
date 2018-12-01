@@ -37,18 +37,14 @@
             </div>-->
         </div>
         <div class="wrapper">
-            <form action="/search.php">
-                <input id="searchButton" type="text" placeholder="Search..." name="searchQuery">
-                <!--<button type="submit">Submit</button>-->
+            <form action="member.php">
+                <input id="searchButton" onclick="filterFunction()" type="text" placeholder="Search..." name="searchQuery">
+                <button type="submit">Submit</button>
             </form>
         </div>
 	</body>
     <script>
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            function filterFunction() {
+        function filterFunction() {
                 var input, filter, ul, li, a, i;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
