@@ -93,7 +93,7 @@ $workOrder = "CREATE TABLE IF NOT EXISTS WorkOrder(
 makeQuery($conn, $workOrder);
 $room = "CREATE TABLE IF NOT EXISTS Room(
     roomNumber int PRIMARY KEY,
-    nickName varchar(50),
+    nickName varchar(50)
   )";
 makeQuery($conn,$room);
 ?>
