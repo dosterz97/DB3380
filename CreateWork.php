@@ -13,9 +13,10 @@
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
         <div>
-            <form class="forms" action="/actionPage.php" method="post">
-                Location: <input type="text" name="amount"><br><br>
-                <textarea placeholder="Description" rows="10" cols="30"></textarea><br><br>
+            <form class="forms" action="registerWorkOrder.php" method="post" id="workOrdFrm">
+                Filing Member Pawprint: <input type="text" name="pawprint"><br>
+                Location: <input type="text" name="location"><br><br>
+                Description: <textarea name="description" form="workOrdFrm"></textarea><br><br>
                 <input class="Sbuttons" type="submit" value="Submit">
             </form>
         </div>

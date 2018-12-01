@@ -93,9 +93,11 @@ makeQuery($conn, $fine);
 
 $workOrder = "CREATE TABLE IF NOT EXISTS WorkOrder(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    location varchar(30) NOT NULL,
     filingMemberId varchar(6) NOT NULL,
     workOrderDescription Text,
-    amount float NOT NULL,
+    amount float,
+    dateFiled date,
     workOrderStatus ENUM ('pendingFunding', 'pendingCompletion', 'finished', 'wontFix')
   )";
 makeQuery($conn, $workOrder);
