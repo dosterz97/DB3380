@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,7 +33,8 @@
                 </thead>
                 <tbody>
                     <?php
-                        $sql = "SELECT * FROM Fine";
+                        $pawprint = $_SESSION['pawprint'];
+                        $sql = "SELECT * FROM Fine WHERE Fine.guiltyMemberId = '$pawprint'";
                         $result = mysqli_query($conn, $sql);
                         while($fine = mysqli_fetch_assoc($result)) {
                             echo "<tr>";

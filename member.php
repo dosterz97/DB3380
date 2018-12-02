@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <style>
@@ -26,6 +29,7 @@
                 // output data of each row
                 while($row = $result->fetch_assoc()) {                
                     $pawprint = $row["pawprint"];
+                    $_SESSION['pawprint'] = $pawprint;
                     $firstName = $row["firstName"];
                     $lastName = $row["lastName"];
                     $position = $row["position"];
