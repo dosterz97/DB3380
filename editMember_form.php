@@ -6,7 +6,7 @@ session_start();
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
-        <title>Add Member</title>
+        <title>Beta Sigma Psi - Edit Member</title>
     </head>
     <body>
         <?php 

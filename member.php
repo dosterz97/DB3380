@@ -58,6 +58,7 @@
             ?>
         </h2>
         <div id="memberPage" class="member-buttons-wrapper">
+            <button type="button" class="buttons" onclick="window.location.href='editMember_form.php'">Edit</button>
             <button type="button" class="buttons" onclick="window.location.href='FinesPage.php'">Fines</button>
             <button type="button" class="buttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
         </div>
