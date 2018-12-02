@@ -50,7 +50,7 @@
                         $resultParent = mysqli_query($conn, $newSQL);
                         $counter = 0;
                         
-                        echo '<tr>';
+                        echo '<tr onclick="window.location.href = \'member.php?searchQuery='.$pawprint.'\'">';
                         echo '<td>'.$member['firstName']." ".$member['lastName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint']."@mail.missouri.edu".'</td>';
                         
                         while($finalParent = mysqli_fetch_assoc($resultParent)){
@@ -67,6 +67,8 @@
             </tbody>
         </table>
                 <script>
+               ;
+                        
             var modal = document.getElementById('myModal');
             var btn = document.getElementById("myBtn");
             var span = document.getElementsByClassName("close")[0]; 
