@@ -83,7 +83,7 @@ makeQuery($conn, $memberParent);
 $fine = "CREATE TABLE IF NOT EXISTS Fine(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     guiltyMemberId varchar(6) NOT NULL,
-    filingMemeberId varchar(6) NOT NULL,
+    filingMemberId varchar(6) NOT NULL,
     fineStatus ENUM ('paid', 'pending') NOT NULL,
     fineDate date NOT NULL, 
     fineAmount float NOT NULL,
