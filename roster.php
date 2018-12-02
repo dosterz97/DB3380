@@ -33,8 +33,10 @@
                     <td>Member</td>
                     <td>Year</td>
                     <td>Email</td>
-                    <td>Parent(s)</td>
-                    <td>Parent Email</td>
+                    <td>Parent 1</td>
+                    <td>Parent 1 Email</td>
+                    <td>Parent 2</td>
+                    <td>Parent 2 Email</td>
                 </tr>
             </thead>
             <tbody>
@@ -43,15 +45,22 @@
                     $result = mysqli_query($conn, $sql);
 
                     while($member = mysqli_fetch_assoc($result)) {
-                        $test = $member['pawprint'];
-                        $newSQL = "SELECT * FROM memberParent WHERE pawprint = '$test'";
+                        $pawprint = $member['pawprint'];
+                        $newSQL = "SELECT * FROM memberParent WHERE pawprint = '$pawprint'";
                         $resultParent = mysqli_query($conn, $newSQL);
-                        //$finalParent = mysqli_fetch_assoc($resultParent);
+                        $counter = 0;
+                        
                         echo '<tr>';
                         echo '<td>'.$member['firstName']." ".$member['lastName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint']."@mail.missouri.edu".'</td>';
+                        
                         while($finalParent = mysqli_fetch_assoc($resultParent)){
-                            echo '<td>'.$finalParent['parentFirstName']." ".$finalParent['parentLastName'].'</td>'.'<td>'.$finalParent['parentEmail'].'</td>';
+                            $counter++;
+                            echo '<td>'.$finalParent['parentFirstName']." ".$finalParent['parentLastName'].'</td>'.'<td>'.$finalParent['parentEmail'];
+                            if($resultParent->num_rows != $counter){
+                                echo '<br>';
+                            }
                         }
+                        echo '</td>';
                         echo '</tr>';
                     }
                 ?>
