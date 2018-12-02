@@ -73,7 +73,7 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
 makeQuery($conn, $member);
 
 $memberParent = "CREATE TABLE IF NOT EXISTS MemberParent(
-    pawprint varchar(6) PRIMARY KEY,
+    pawprint varchar(6),
     parentFirstName varchar(30) NOT NULL,
     parentLastName varchar(30) NOT NULL,
     parentEmail varchar(60)
