@@ -24,7 +24,7 @@
             $searchQuery = htmlspecialchars($_GET["searchQuery"]);
             $query = "SELECT * FROM `Member` WHERE `pawprint` = '$searchQuery' ORDER BY `pawprint` DESC";
                         
-            $result = makeQuery($conn, $query);
+            $result = mysqli_query($conn, $query);
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {                
