@@ -32,8 +32,21 @@
                         $result = mysqli_query($conn, $sql);
 
                         while($room = mysqli_fetch_assoc($result)){
+                            $roomNum = $room['roomNumber'];
+                            $memberQuery = "SELECT firstName, lastName FROM member WHERE `roomNumber` = $roomNum";
+                            $memberResult = mysqli_query($conn, $memberQuery);
+                            $counter = 0;
+                            
                             echo "<tr>";
-                            echo '<td>'.$room['nickName'].'</td>'. '<td>'.$room['roomNumber'].'</td>';
+                            echo '<td>'.$room['nickName'].'</td>'. '<td>'.$roomNum.'</td>'.'<td>';
+                            while($member = mysqli_fetch_assoc($memberResult)) {
+                                $count++;
+                                echo $member['firstName'] . " " . $member['lastName'];
+                                if($memberResult->num_rows != $counter) {
+                                    echo '<br>';
+                                }
+                            }
+                            echo '</td>';
                             echo '</tr>';
                         }
                     ?>
