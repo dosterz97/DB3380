@@ -68,7 +68,7 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
     mStatus ENUM ('active', 'inactive', 'associate', 'alumni') NOT NULL,
     semesterJoined varchar(30) NOT NULL,
     yearInSchool ENUM ('freshman', 'sophmore', 'junior', 'senior')
-    -- FOREIGN KEY (roomNumber) REFERENCES Room(roomID)
+    -- FOREIGN KEY (roomNumber) REFERENCES Room(roomNumber)
   )";
 makeQuery($conn, $member);
 
