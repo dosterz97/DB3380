@@ -48,7 +48,7 @@
                         $resultParent = mysqli_query($conn, $newSQL);
                         $finalParent = mysqli_fetch_assoc($resultParent);
                         echo "<tr>";
-                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$finalParent['parentFirstName'].'</td>'.'<td>'.$finalParent['parentEmail'].'</td>';
+                        echo '<td>'.$member['firstName']." ".$member['lastName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint']."@mail.missouri.edu".'</td>'.'<td>'.$finalParent['parentFirstName']." ".$finalParent['parentLastName'].'</td>'.'<td>'.$finalParent['parentEmail'].'</td>';
                         echo '</tr>';
                     }
                 ?>
