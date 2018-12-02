@@ -1,5 +1,5 @@
 <?php
-    header("Location: index.php");
+    header("Location: WorkOrders.php");
     require 'initDB.php';
     
     $filingMember = $_POST['pawprint'];
