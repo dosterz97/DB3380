@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
+        <?php
+            require 'initDB.php';
+        ?>
         <h1 class="header">
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
             Beta Sigma Psi - Fines
@@ -26,6 +29,15 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $sql = "SELECT * FROM Fine";
+                        $result = mysqli_query($conn, $sql);
+                        while($fine = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            echo '<td>'.$fine['id'].'</td><td>'.$fine['fineDate'].'</td><td>'.$fine['fineDescription'].'</td><td>'.$fine['fineAmount'].'</td><td>'.$fine['fineStatus'].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
