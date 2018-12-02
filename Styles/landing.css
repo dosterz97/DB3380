@@ -20,8 +20,8 @@
 }
 
 .image {
-    height: 80px;
-    width: 80px;
+    height: 10%;
+    width: 10%;
 }
 
 #myBtn {
@@ -54,6 +54,21 @@
     font-size:1em;
 }
 
+.sButtons {
+    width: 200px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    border: 2px solid maroon;
+    transition: .3s;
+    font-size: 20px;
+}
+
 #searchButton {
     width: 246px;
     outline: none;
@@ -72,9 +87,9 @@
     color:white;
 }
 
-.Sbuttons:hover {
+.sButtons:hover {
     background-color: maroon;
-    color:white;
+    color: white;
 }
 
 .buttons:hover {

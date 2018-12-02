@@ -19,7 +19,7 @@
             Beta Sigma Psi - Fines
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <button type="button" class="Sbuttons" onclick="window.location.href='CreateFine.php'">Create Fine <i class="material-icons md-24">add</i></button>
+        <button type="button" class="buttons" onclick="window.location.href='CreateFine.php'">Create Fine <i class="material-icons md-24">add</i></button>
         <div class="space">
             <table>
                 <thead>

@@ -5,6 +5,7 @@
         <title>Beta Sigma Psi - Create Fine</title>
         <link rel="stylesheet" type="text/css" href="Styles/landing.css">
         <link rel="stylesheet" type="text/css" href="Styles/tables.css">
+        <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
     </head>
     <body>
         <h1 class="header">
@@ -19,7 +20,7 @@
                 Amount: <input type="number" name="amount"><br><br>
                 Description:
                 <textarea name="description" form="fineFrm" rows="10" cols="30"></textarea><br><br>
-                <input class="Sbuttons" type="submit" value="Submit">
+                <input class="sButtons" type="submit" value="Submit">
             </form>
         </div>
     </body>

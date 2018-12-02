@@ -16,7 +16,7 @@
             <input type="number" name="roomNumber"><br>
             Room Nickname: 
             <input type="text" name="roomNickname"><br>
-            <input type="submit">
+            <input class="sButtons" type="submit">
         </form>
     </body>
 </html>
