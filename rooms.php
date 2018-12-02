@@ -40,7 +40,7 @@
                             echo "<tr>";
                             echo '<td>'.$room['nickName'].'</td>'. '<td>'.$roomNum.'</td>'.'<td>';
                             while($member = mysqli_fetch_assoc($memberResult)) {
-                                $count++;
+                                $counter++;
                                 echo $member['firstName'] . " " . $member['lastName'];
                                 if($memberResult->num_rows != $counter) {
                                     echo '<br>';

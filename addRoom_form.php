@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
+        <link rel="stylesheet" type="text/css" href="Styles/landing.css">
         <title>Beta Sigma Psi - Add Room</title>
     </head>
     <body> 

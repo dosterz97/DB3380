@@ -46,9 +46,12 @@
                         $test = $member['pawprint'];
                         $newSQL = "SELECT * FROM memberParent WHERE pawprint = '$test'";
                         $resultParent = mysqli_query($conn, $newSQL);
-                        $finalParent = mysqli_fetch_assoc($resultParent);
-                        echo "<tr>";
-                        echo '<td>'.$member['firstName']." ".$member['lastName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint']."@mail.missouri.edu".'</td>'.'<td>'.$finalParent['parentFirstName']." ".$finalParent['parentLastName'].'</td>'.'<td>'.$finalParent['parentEmail'].'</td>';
+                        //$finalParent = mysqli_fetch_assoc($resultParent);
+                        echo '<tr>';
+                        echo '<td>'.$member['firstName']." ".$member['lastName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint']."@mail.missouri.edu".'</td>';
+                        while($finalParent = mysqli_fetch_assoc($resultParent)){
+                            echo '<td>'.$finalParent['parentFirstName']." ".$finalParent['parentLastName'].'</td>'.'<td>'.$finalParent['parentEmail'].'</td>';
+                        }
                         echo '</tr>';
                     }
                 ?>
