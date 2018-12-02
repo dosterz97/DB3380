@@ -40,13 +40,13 @@
             <tbody>
                 <?php
                     $sql = "SELECT * FROM member";
-                    //$sqli = "SELECT * FROM memberParent";
+                    $sqli = "SELECT * FROM memberParent";
                     $result = mysqli_query($conn, $sql);
-                    //$resulti = mysqli_query($conn, $sqli);
+                    $resulti = mysqli_query($conn, $sqli);
 
-                    while($member = mysqli_fetch_assoc($result)){
+                    while($member = mysqli_fetch_assoc($result) || $memberParent = mysqli_fetch_assoc($resulti)){
                         echo "<tr>";
-                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint'].'</td>';
+                        echo '<td>'.$member['firstName'].'</td>'.'<td>'.$member['yearInSchool'].'</td>'.'<td>'.$member['pawprint'].'</td>'.'<td>'.$memberParent['parentFirstName'].'</td>';
                         echo '</tr>';
                     }
                     /*while($memberParent = mysqli_fetch_assoc($resulti)){

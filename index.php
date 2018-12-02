@@ -23,20 +23,6 @@
             <button type="button" class="buttons" onclick="window.location.href='rooms.php'">Rooms</button>
         </div>     
         <div class="wrapper">
-            <button type="button" onclick="window.location.href='member.php'" class="buttons">Member Example</button>
-            <!--<button onclick="myFunction()" class="buttons">Search for Member</button>
-            <div id="myDropdown" class="wrapper dropdown-content">
-                <input type="text" placeholder="Search for Member" id="myInput" onkeyup="filterFunction()">
-                    <a href="#about">About</a>
-                    <a href="#base">Base</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#support">Support</a>
-                    <a href="#tools">Tools</a>
-            </div>-->
-        </div>
-        <div class="wrapper">
             <form action="member.php">
                 <input id="searchButton" onclick="filterFunction()" type="text" placeholder="Search..." name="searchQuery">
                 <button type="submit">Submit</button>

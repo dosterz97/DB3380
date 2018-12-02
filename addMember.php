@@ -19,12 +19,12 @@
     $parentTwoEmail = $_POST['parent2email'];
 
     if($parentOneFirstName != NULL) {
-      $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$parentOneFirstName', '$parentOneLastName', '$parentOneEmail');";
+      $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$pawprint', '$parentOneFirstName', '$parentOneLastName', '$parentOneEmail');";
         makeQuery($conn, $insertQueryParents);
     }
 
     if($parentTwoFirstName != NULL) {
-        $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
+        $insertQueryParents = "INSERT INTO MemberParent (pawprint, parentFirstName, parentLastName, parentEmail) VALUES ('$pawprint', '$parentTwoFirstName', '$parentTwoLastName', '$parentTwoEmail');";
         makeQuery($conn, $insertQueryParents);
     }
     echo "<script type='text/javascript'>alert('member successfully added');</script>";

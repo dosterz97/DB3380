@@ -67,10 +67,10 @@ $member = "CREATE TABLE IF NOT EXISTS Member(
     seniority int,
     mStatus ENUM ('active', 'inactive', 'associate', 'alumni') NOT NULL,
     semesterJoined varchar(30) NOT NULL,
-    yearInSchool ENUM ('freshman', 'sophmore', 'junior', 'senior'),
+    yearInSchool ENUM ('freshman', 'sophmore', 'junior', 'senior')
     -- FOREIGN KEY (roomNumber) REFERENCES Room(roomID)
   )";
-makeQuery($conn,$member);
+makeQuery($conn, $member);
 
 $memberParent = "CREATE TABLE IF NOT EXISTS MemberParent(
     pawprint varchar(6) PRIMARY KEY,
