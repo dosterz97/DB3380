@@ -24,7 +24,7 @@
         </div>     
         <div class="wrapper">
             <form action="member.php">
-                <input id="searchButton" onclick="filterFunction()" type="text" placeholder="Search..." name="searchQuery"><br><br>
+                <input id="searchButton" onclick="filterFunction()" type="text" placeholder="Search..." name="searchQuery"><br>
                 <button class="sButtons" type="submit">Submit</button>
             </form>
         </div>

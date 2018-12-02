@@ -17,11 +17,3 @@ form {
 .header img {
     width: 175px;
 }
-#submitBtn{
-    font-size: 20px;
-}
-#deleteBtn {
-    background-color: maroon;
-    color: black;
-    font-size: 15px;
-}
