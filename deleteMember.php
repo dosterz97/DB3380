@@ -6,7 +6,7 @@
     $pawprint = $_SESSION['pawprint'];
     $deleteQuery  = "DELETE FROM Member WHERE pawprint = '$pawprint';";
     makeQuery($conn, $deleteQuery);
-    header("Location: roster.php");
+    header("Location: index.php");
 
 
 ?>

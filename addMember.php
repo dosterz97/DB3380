@@ -1,5 +1,5 @@
 <?php
-    header("Location: roster.php");
+    header("Location: index.php");
     require 'initDB.php';
 
     $pawprint = $_POST['pawprint'];
