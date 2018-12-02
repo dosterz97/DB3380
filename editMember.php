@@ -1,27 +1,14 @@
 <?php
-function makeQuery($myConnection, $myQuery) {
-    $result = $myConnection->query($myQuery);
-    if($result === TRUE) {
-        logVariable("Successful query");
-    }
-    else if($result->error) {
-        logVariableWithContext("Error in query: ", $myConnection->error);
-    }
-    else {
-        logVariable("query didn't return TRUE or an error");
-        logVariable($result);
-    }
-}
+    require 'initDB.php';
 
-    //this is where we take the form data and add it to the database
     $pawprint = $_POST['pawprint'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $semesterJoined = $_POST['semesterJoined'];
     $position = $_POST['position'];
-    $status = $_POST['status']; // TODO: check this
-    $grade = $_POST['grade'];
-    $seniorityPoints = $_POST['seniorityPoints'];
+    $mStatus = $_POST['mStatus'];
+    $yearInSchool = $_POST['yearInSchool'];
+    $seniority = $_POST['seniority'];
     $roomNumber = $_POST['roomNumber'];
     $parentOneFirstName = $_POST['parent1fname'];
     $parentOneLastName = $_POST['parent1lname'];
@@ -30,20 +17,8 @@ function makeQuery($myConnection, $myQuery) {
     $parentTwpLastName = $_POST['parent2lname'];
     $parentTwoEmail = $_POST['parent2email'];
 
-    //TODO: Add sql connection and execute query based on data passed from the form
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "beta_sig_iota";
 
-    $conn = new mysqli($servername, $username, $password);
-
-    if($conn->connect_error) {
-        logVariableWithContext("Error connecting to database: ", $conn->connect_error);
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $updateQuery = "UPDATE Member SET pawprint = '$pawprint', fname = '$firstName', lname = '$lastName', semesterJoined = '$semesterJoined', position = '$position', mStatus = '$status', schoolYear = '$grade', roomNumber = $roomNumber WHERE pawprint = '$pawprint';";
+    $updateQuery = "UPDATE Member SET pawprint = '$pawprint', firstName = '$firstName', lastName = '$lastName', semesterJoined = '$semesterJoined', position = '$position', mStatus = '$mStatus', yearInSchool = '$yearInSchool', roomNumber = $roomNumber WHERE pawprint = '$pawprint';";
     
     makeQuery($conn, $updateQuery);
 

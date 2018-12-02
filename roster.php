@@ -15,8 +15,8 @@
             Beta Sigma Psi - Roster
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
+        <button id="myBtn">Update Members</button>
         <div class="wrapper">
-            <button id="myBtn">Update Members</button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -24,8 +24,6 @@
                     <button type="button" class="buttons" onclick="">Edit Member</button>
                 </div>
             </div>
-            <button type="button" class="buttons" onclick="">Email All Members</button>
-            <button type="button" class="buttons" onclick="">Email All Alumni</button>
         </div><br>
         <table>
             <thead>

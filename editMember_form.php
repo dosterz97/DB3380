@@ -1,45 +1,33 @@
 <?php
-// Start the session
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="Styles/formStyle.css">
+        <link rel="stylesheet" type="text/css" href="Styles/landing.css">
         <title>Beta Sigma Psi - Edit Member</title>
     </head>
     <body>
         <?php 
-       // UNCOMMENT WHEN HOOKED UP TO DB
-            $pawprint = $_POST['pawprint'];
-            $_SESSION["pawprint"] = $pawprint;
+            require 'initDB.php';
+        
+            $pawprint = $_SESSION['pawprint'];
             $queryForResult = "SELECT * FROM Member WHERE pawprint = '$pawprint';";
-        
-            $servername = "localhost";
-            $username = "root";
-            $password = "root";
-            $dbname = "beta_sig_iota";
-        
-            $conn = new mysqli($servername, $username, $password);
-
-            if($conn->connect_error) {
-                logVariableWithContext("Error connecting to database: ", $conn->connect_error);
-                die("Connection failed: " . $conn->connect_error);
-            }
             
-            $result = $conn->query($queryForResult);
+            $result = mysqli_query($conn, $queryForResult);
         
             if(!$result) {
                 die();
             }
             
-            $row = mysql_fetch_row($result);
-            $_SESSION["firstName"] = $row['fname'];
-            $_SESSION["lastName"] = $row['lname'];
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION["firstName"] = $row['firstName'];
+            $_SESSION["lastName"] = $row['lastName'];
             $_SESSION["semesterJoined"] = $row['semesterJoined'];
             $_SESSION["position"] = $row['position'];
             $_SESSION["status"] = $row['mStatus'];
-            $_SESSION["schoolYear"] = $row['schoolYear'];
+            $_SESSION["schoolYear"] = $row['yearInSchool'];
             $_SESSION["roomNumber"] = $row['roomNumber'];
             $_SESSION["seniority"] = $row['seniority'];
 
@@ -52,7 +40,7 @@ session_start();
         <!--TODO: Finish hooking up all fields to tables-->
         <form action="editMember.php" method="post">
             Pawprint:
-            <input type="text" name="pawprint" placeholder="Mizzou Pawprint" <?php echo("value='".$_POST['pawprint'])."'"?>><br>
+            <input type="text" name="pawprint" placeholder="Mizzou Pawprint" <?php echo("value='".$_SESSION['pawprint'])."'"?>><br>
             First Name:
             <input type="text" name="firstName" placeholder="First Name"<?php echo("value='".$_SESSION['firstName'])."'"?>><br>
             Last Name:
@@ -60,24 +48,24 @@ session_start();
             Semester Joined/Pledge Class:
             <input type="text" name="semesterJoined" placeholder="Semester Joined" <?php echo("value='".$_SESSION['semesterJoined'])."'"?>><br>
             Position:
-            <input type="text" name="position" placeholder="Position" <?php echo("value='".$_SESSION['semesterJoined'])."'"?>><br>
+            <input type="text" name="position" placeholder="Position" <?php echo("value='".$_SESSION['position'])."'"?>><br>
             Status:<br>
             <!--TODO: figure out logic for checking these radio buttons-->
-            <input type="radio" name="status" value="active" checked> Active<br>
-            <input type="radio" name="status" value="neophyte"> Neophyte<br>
-            <input type="radio" name="status" value="associate"> Associate/Pledge<br>
-            <input type="radio" name="status" value="alumni"> Alumni<br>
+            <input type="radio" name="mStatus" value="active" checked> Active<br>
+            <input type="radio" name="mStatus" value="neophyte"> Neophyte<br>
+            <input type="radio" name="mStatus" value="associate"> Associate/Pledge<br>
+            <input type="radio" name="mStatus" value="alumni"> Alumni<br>
             Room Number:
             <input type="number" name="roomNumber" <?php echo("value='".$_SESSION['roomNumber'])."'"?>><br>
             Seniority Points:
             <input type="number" name="seniorityPoints"<?php echo("value='".$_SESSION['seniority'])."'"?>><br>
             Year in School:<br>
             <!--Next inputs define member school year-->
-            <input type="radio" name="grade" value="freshman" checked> Freshman<br>
-            <input type="radio" name="grade" value="sophomore"> Sophomore<br>
-            <input type="radio" name="grade" value="junior"> Junior<br>
-            <input type="radio" name="grade" value="senior"> Senior<br>
-            <input type="radio" name="grade" value="graduate"> Graduate<br>
+            <input type="radio" name="yearInSchool" value="freshman"> Freshman<br>
+            <input type="radio" name="yearInSchool" value="sophomore" checked> Sophomore<br>
+            <input type="radio" name="yearInSchool" value="junior"> Junior<br>
+            <input type="radio" name="yearInSchool" value="senior"> Senior<br>
+            <input type="radio" name="yearInSchool" value="graduate"> Graduate<br>
             Parent One First Name:
             <input type="text" name="parent1fname"><br>
             Parent One Last Name:
@@ -90,8 +78,8 @@ session_start();
             <input type="text" name="parent2lname"><br>
             Parent Two Email:
             <input type="text" name="parent2email"><br>
-            <input id="submitBtn" type="submit">
-            <button id="deleteBtn" type="button" onclick="deleteMember()"><b>Delete</b></button>
+            <input id="submitBtn" class="sButtons" type="submit">
+            <button id="deleteBtn" class="sButtons" type="button" onclick="deleteMember()"><b>Delete</b></button>
         </form>
         
         <script>
