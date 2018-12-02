@@ -15,16 +15,7 @@
             Beta Sigma Psi - Roster
             <img class="image" src="images/BetaSigCrest.png" alt="Crest">
         </h1>
-        <button id="myBtn">Update Members</button>
-        <div class="wrapper">
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <button type="button" class="buttons" onclick="window.location.href='addMember_form.html'">Add Member</button>
-                    <button type="button" class="buttons" onclick="">Edit Member</button>
-                </div>
-            </div>
-        </div><br>
+        <button type="button" id="myBtn" class="buttons" onclick="window.location.href='addMember_form.html'">Add Member</button><br><br>
         <table>
             <thead>
                 <tr>
@@ -64,23 +55,5 @@
                 ?>
             </tbody>
         </table>
-                <script>
-               ;
-                        
-            var modal = document.getElementById('myModal');
-            var btn = document.getElementById("myBtn");
-            var span = document.getElementsByClassName("close")[0]; 
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
     </body>
 </html>
