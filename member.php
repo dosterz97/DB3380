@@ -9,14 +9,6 @@
             font-size: 1.5em;
             text-align:center;
         }
-        .member-buttons-wrapper {
-            max-width: 1000px;
-            display:flex;
-            justify-content:center;
-        }
-        .member-buttons-wrapper .buttons {
-            margin:0px 5px;
-        }
     </style>
     <head>
         <?php
@@ -56,8 +48,8 @@
             <?php
                 echo $firstName . " " . $lastName;
             ?>
-        </h2>
-        <div id="memberPage" class="member-buttons-wrapper">
+        </h2><br>
+        <div class="wrapper"><br>
             <button type="button" class="buttons" onclick="window.location.href='editMember_form.php'">Edit</button>
             <button type="button" class="buttons" onclick="window.location.href='FinesPage.php'">Fines</button>
             <button type="button" class="buttons" onclick="window.location.href='WorkOrders.php'">Work Orders</button>
